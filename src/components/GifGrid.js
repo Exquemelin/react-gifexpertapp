@@ -1,10 +1,13 @@
 // useEffect nos permite ejecutar cógido de forma condicional
 import React from 'react' 
-import { useFetchGifs } from '../hooks/useFetchGifs'
-// import { getGifs } from '../helpers/getGifs';
+
+// Importamos prop-types para utilizarlo
+import PropTypes from 'prop-types';
 
 
 import { GifGridItem } from './GifGridItem';
+import { useFetchGifs } from '../hooks/useFetchGifs'
+// import { getGifs } from '../helpers/getGifs';
 
 
 
@@ -47,4 +50,8 @@ export const GifGrid = ({ category }) => {
             </div>
         </>
     )
+}
+
+GifGrid.propTypes = {
+    category: PropTypes.string.isRequired
 }
